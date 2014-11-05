@@ -1,0 +1,24 @@
+{
+  "name": "melange",
+  "version": "0.0.1",
+  "description": "The new CMS service for the vvvnt",
+  "main": "bin/index.html",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avantdotorg/melange.git"
+  },
+  "keywords": [
+    "angularjs",
+    "node",
+    "gulp"
+  ],
+  "author": "B Cedric Cogell",
+  "license": "Creative Commons",
+  "bugs": {
+    "url": "https://github.com/avantdotorg/melange/issues"
+  },
+  "homepage": "https://github.com/avantdotorg/melange"
+}
