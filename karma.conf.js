@@ -1,6 +1,4 @@
-// Karma configuration
-// Generated on Fri Nov 07 2014 14:08:03 GMT-0500 (EST)
-
+// require any vendor or test dependencies and list them in "files: []"
 var angular      = require.resolve('angular');
 var angularMocks = require.resolve('angular-mocks');
 
@@ -22,7 +20,7 @@ module.exports = function(config) {
       angularMocks,
       'src/**/*.mod.js',
       'src/**/*.js',
-      'src/**/*.spec.js',
+      'src/**/*.test.js',
     ],
 
 

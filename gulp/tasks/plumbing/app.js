@@ -6,7 +6,7 @@ var concat   = require('gulp-concat');
 
 gulp.task( taskname, function () {
   // make sure to concat all the module definition files before anything else
-  gulp.src(['./src/**/*.mod.js', './src/**/*.js'])
+  gulp.src(['./src/**/*.mod.js', './src/**/*.js', '!src/**/*.test.js'])
     .pipe( concat( config.outputAppJsFile ) )
     .pipe( gulp.dest( config.outputDirectory ) );
 });
