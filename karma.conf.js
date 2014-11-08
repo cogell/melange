@@ -20,12 +20,13 @@ module.exports = function(config) {
       angularMocks,
       'src/**/*.mod.js',
       'src/**/*.js',
-      'src/**/*.test.js',
+      'src/**/*.test.js'
     ],
 
 
     // list of files to exclude
     exclude: [
+    'src/**/*.e2e.js'
     ],
 
 
