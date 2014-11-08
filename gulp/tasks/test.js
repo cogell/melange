@@ -2,19 +2,32 @@ var gulp     = require('gulp');
 var karma    = require('karma').server;
 var taskname = require('path').basename(__filename, '.js');
 
-var task = function (watch, cb) {
+var task = function (watch, browser, cb) {
   var singleRunBool = !watch;
+  var browsers = browser;
+
   karma.start({
     // annoying that the path to conf is relative to this file's local
     configFile: __dirname + './../../karma.conf.js',
-    singleRun: singleRunBool
+    singleRun: singleRunBool,
+    browsers: [ browser ]
   }, cb);
 };
 
 gulp.task( taskname , function (done) {
-  task(false, done);
+  task(false, 'Chrome', done);
 });
 
 gulp.task( taskname + ':watch' , function (done) {
-  task(true, done);
+  task(true, 'Chrome', done);
+});
+
+gulp.task( taskname + ':firefox' , function (done) {
+
+  task(false, 'Firefox', done);
+});
+
+gulp.task( taskname + ':phantomjs' , function (done) {
+
+  task(false, 'PhantomJS', done);
 });
