@@ -1,7 +1,7 @@
 # Melange
 
-define melange - "a collection of items"
-Dune - "The spice must flow."
+>define melange - "a collection of items"
+>Dune - "The spice must flow."
 
 ## avantdotorg browser client 2.0
 
