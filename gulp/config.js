@@ -4,23 +4,27 @@ var src  = './src';
 module.exports = {
   dest: dest,
   src: src,
-  outputVendorJsFile: 'vendor.js',
 
   browserSync: {
     server: {
       // serve src folder for sourcemap linking
       baseDir: [dest, src],
-    },
+    }
   },
 
   app: {
-    src: ['./src/**/*.mod.js', './src/**/*.js', '!./src/**/*.test.js'],
+    src: ['./src/**/*.mod.js', './src/**/*.js', '!./src/**/*.test.js', '!./src/**/*.e2e.js'],
     output: 'app.js',
     dest: dest,
   },
 
   lint: {
     src: './src/**/*.js',
+  },
+
+  e2e: {
+    src: './src/**/*.e2e.js',
+    watch: dest + '/**/*.js'
   },
 
   vendor: {
@@ -35,6 +39,7 @@ module.exports = {
     src: [
       src + '/index.html',
     ],
+    dest: dest
   },
 
   clean: {
