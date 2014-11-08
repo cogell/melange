@@ -2,8 +2,6 @@
 var angular      = require.resolve('angular');
 var angularMocks = require.resolve('angular-mocks');
 
-var browser      = process.env.KARMA_BROWSER || 'Chrome';
-
 module.exports = function(config) {
   config.set({
 
@@ -62,7 +60,7 @@ module.exports = function(config) {
 
     // start these browsers
     // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
-    browsers: [ browser ],
+    browsers: [ 'Chrome' ],
 
 
     // Continuous Integration mode
