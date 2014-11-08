@@ -1,3 +1,5 @@
+var relquire     = require('relquire');
+
 // require any vendor or test dependencies and list them in "files: []"
 var angular      = require.resolve('angular');
 var angularMocks = require.resolve('angular-mocks');
@@ -6,7 +8,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: relquire.resolve('~/'),
 
 
     // frameworks to use
@@ -26,7 +28,7 @@ module.exports = function(config) {
 
     // list of files to exclude
     exclude: [
-    'src/**/*.e2e.js'
+      'src/**/*.e2e.js'
     ],
 
 

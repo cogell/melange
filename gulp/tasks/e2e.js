@@ -1,3 +1,5 @@
+var relquire   = require('relquire');
+
 var gulp       = require('gulp');
 var taskname   = require('path').basename(__filename, '.js');
 var config     = require('./../config')[ taskname ];
@@ -9,7 +11,7 @@ gulp.task( taskname, ['webdriver:update', 'browserSync:dontopen'], function () {
   return gulp.src( config.src )
     .pipe(protractor({
       // annoying that the path to conf is relative to this file's local
-      configFile: __dirname + './../../protractor.conf.js',
+      configFile: relquire.resolve('~/gulp/confs/protractor.conf'),
     }))
     .on('error', function(e) { throw e });
 
