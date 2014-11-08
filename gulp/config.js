@@ -19,6 +19,10 @@ module.exports = {
     dest: dest,
   },
 
+  lint: {
+    src: './src/**/*.js',
+  },
+
   vendor: {
     src: [
       require.resolve('angular'),
