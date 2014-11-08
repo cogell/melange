@@ -4,8 +4,8 @@
   "description": "The new CMS service for the vvvnt",
   "main": "bin/index.html",
   "scripts": {
-    "test": "node_modules/.bin/gulp test",
-    "start": "node_modules/.bin/gulp watch"
+    "test": "node_modules/gulp/bin/gulp test",
+    "start": "node_modules/gulp/bin/gulp watch"
   },
   "repository": {
     "type": "git",
