@@ -35,6 +35,7 @@ module.exports = {
     src: [
       src + '/index.html',
     ],
+    dest: dest
   },
 
   clean: {

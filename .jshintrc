@@ -85,6 +85,10 @@
     // Custom Globals
     "globals"       : {
         "angular": false,
+
+        "__filename": false,
+        "__dirname": false,
+
         "describe": false,
         "expect": false,
         "it": false,

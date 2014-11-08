@@ -4,7 +4,6 @@ var taskname = require('path').basename(__filename, '.js');
 
 var task = function (watch, browser, cb) {
   var singleRunBool = !watch;
-  var browsers = browser;
 
   karma.start({
     // annoying that the path to conf is relative to this file's local
@@ -19,7 +18,7 @@ gulp.task( taskname , function (done) {
 });
 
 gulp.task( taskname + ':watch' , function (done) {
-  task(true, 'Chrome', done);
+  task(true, 'PhantomJS', done);
 });
 
 gulp.task( taskname + ':firefox' , function (done) {
