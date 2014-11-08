@@ -1,15 +1,13 @@
 var gulp     = require('gulp');
 var taskname = require('path').basename(__filename, '.js');
-var config   = require('./../../config');
+var config   = require('./../../config')[ taskname ];
 
 var concat   = require('gulp-concat');
-
-var angular  = require.resolve('angular');
+var uglify     = require('gulp-uglify');
 
 gulp.task( taskname , function () {
-  gulp.src([
-      angular
-    ])
-    .pipe( concat( config.outputVendorJsFile ) )
-    .pipe( gulp.dest( config.outputDirectory ) );
+  return gulp.src( config.src )
+    .pipe( concat( config.output ) )
+    .pipe( uglify() )
+    .pipe( gulp.dest( config.dest ) );
 });
