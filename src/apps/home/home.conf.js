@@ -3,6 +3,6 @@ angular
 .config(function ($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'home.tmpl.html'
+      templateUrl: 'apps/home/home.tmpl.html'
     });
 });
