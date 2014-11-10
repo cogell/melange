@@ -21,6 +21,7 @@ module.exports = function(config) {
       angular,
       angularMocks,
       'src/**/*.mod.js',
+      '.tmp/*.tmpl.js',
       'src/**/*.js',
       'src/**/*.test.js'
     ],

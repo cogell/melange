@@ -1,5 +1,6 @@
 var dest = './bin';
 var src  = './src';
+var tmp  = './.tmp';
 
 module.exports = {
   dest: dest,
@@ -12,8 +13,21 @@ module.exports = {
     }
   },
 
+  templates: {
+    // needs to start at the template's modules' root
+    src: './src/apps',
+    dest: tmp
+  },
+
   app: {
-    src: ['./src/**/*.mod.js', './src/**/*.js', '!./src/**/*.test.js', '!./src/**/*.e2e.js'],
+    // make sure to concat all the module definition files before anything else
+    src: [
+      './src/**/*.mod.js',
+      './.tmp/*.tmpl.js',
+      './src/**/*.js',
+      '!./src/**/*.test.js',
+      '!./src/**/*.e2e.js'
+    ],
     output: 'app.js',
     dest: dest,
   },
@@ -30,6 +44,7 @@ module.exports = {
   vendor: {
     src: [
       require.resolve('angular'),
+      require.resolve('angular-route'),
     ],
     output: 'vendor.js',
     dest: dest,
@@ -45,6 +60,7 @@ module.exports = {
   clean: {
     src: [
       dest,
+      tmp
     ],
   },
 

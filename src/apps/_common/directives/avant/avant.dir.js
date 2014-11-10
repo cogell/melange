@@ -1,8 +1,8 @@
 angular
-.module('common.directives')
+.module('common.directives.avant')
 .directive('avAvant', function () {
   return {
     restrict: 'E',
-    template: '<h1>Hi, I\'m melange!</h1>',
+    templateUrl: 'avant.tmpl.html',
   };
 });

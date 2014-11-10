@@ -7,8 +7,7 @@ var concat     = require('gulp-concat');
 var uglify     = require('gulp-uglify');
 var ngAnnotate = require('gulp-ng-annotate'); // keep uglify from mangling impliciently annotated injected strings, see "Implicit Annotation": https://docs.angularjs.org/guide/di
 
-gulp.task( taskname, function () {
-  // make sure to concat all the module definition files before anything else
+gulp.task( taskname, ['templates'], function () {
   return gulp.src( config.src )
     .pipe( sourcemaps.init() )
       .pipe( concat( config.output ) )

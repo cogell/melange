@@ -10,7 +10,7 @@ gulp.task( taskname, ['browserSync'], function () {
   gulp.watch('src/index.html', ['copy']);
 
   gulp.watch( config.dest + '**/*', function (file) {
-    if (file.type === "changed") {
+    if (file.type === 'changed') {
       return browserSync.reload(file.path);
     }
   });

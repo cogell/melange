@@ -90,6 +90,8 @@
         "__filename": false,
         "__dirname": false,
 
+        "console": false,
+
         "describe": false,
         "expect": false,
         "it": false,
