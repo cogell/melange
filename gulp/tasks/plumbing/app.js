@@ -12,7 +12,7 @@ gulp.task( taskname, ['templates'], function () {
     .pipe( sourcemaps.init() )
       .pipe( concat( config.output ) )
       .pipe( ngAnnotate() )
-      .pipe( uglify() )
+      // .pipe( uglify() )
     .pipe( sourcemaps.write() )
     .pipe( gulp.dest( config.dest ) );
 });

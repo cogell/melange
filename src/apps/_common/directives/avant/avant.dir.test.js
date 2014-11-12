@@ -1,13 +1,14 @@
 describe('Avant Directive', function() {
   var element;
-  var $scope;
 
-  beforeEach(module('common.directives'));
+  beforeEach(module('common.directives.avant'));
 
   beforeEach(inject(function($compile, $rootScope){
-    $scope = $rootScope;
+
     element = angular.element('<av-avant></av-avant>');
     $compile(element)($rootScope);
+    $rootScope.$digest();
+
   }));
 
   it('should say "Hi, I\'m melange!"', function() {
