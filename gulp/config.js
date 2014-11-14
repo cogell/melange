@@ -14,7 +14,7 @@ module.exports = {
   },
 
   templates: {
-    src: './src/**/*.tmpl.html',
+    src: './src/apps',
     dest: tmp
   },
 

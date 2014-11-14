@@ -10,8 +10,7 @@ gulp.task( taskname, ['webdriver:update', 'browserSync:dontopen'], function () {
 
   return gulp.src( config.src )
     .pipe(protractor({
-      // annoying that the path to conf is relative to this file's local
-      configFile: relquire.resolve('~/gulp/confs/protractor.conf'),
+      configFile: relquire.resolve('~/gulp/e2e.conf'),
     }))
     .on('error', function(e) { throw e });
 

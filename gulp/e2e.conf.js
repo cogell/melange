@@ -1,3 +1,5 @@
+// config for protractor
+
 exports.config = {
   allScriptsTimeout: 11000,
 

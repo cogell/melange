@@ -3,6 +3,6 @@ angular
 .directive('avAvant', function () {
   return {
     restrict: 'E',
-    templateUrl: 'apps/_common/directives/avant/avant.tmpl.html'
+    templateUrl: 'avant.tmpl.html'
   };
 });

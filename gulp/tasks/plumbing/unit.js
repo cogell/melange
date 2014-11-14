@@ -9,7 +9,7 @@ var task = function (watch, browser, cb) {
 
   karma.start({
     // annoying that the path to conf is relative to this file's local
-    configFile: relquire.resolve('~/gulp/confs/karma.conf'),
+    configFile: relquire.resolve('~/gulp/test.conf'),
     singleRun: singleRunBool,
     browsers: [ browser ]
   }, cb);

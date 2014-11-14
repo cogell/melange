@@ -1,3 +1,5 @@
+// config for karma
+
 var relquire     = require('relquire');
 
 // require any vendor or test dependencies and list them in "files: []"
@@ -23,9 +25,7 @@ module.exports = function(config) {
       'src/**/*.mod.js',
       '.tmp/*.tmpl.js',
       'src/**/*.js',
-      'src/**/*.test.js',
-
-      // 'src/apps/**/*.html'
+      'src/**/*.test.js'
     ],
 
 

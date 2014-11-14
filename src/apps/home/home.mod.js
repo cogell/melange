@@ -1,5 +1,4 @@
 angular
 .module('home', [
-  'ngRoute',
-  'templates'
+  'ngRoute'
 ]);
