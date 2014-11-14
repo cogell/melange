@@ -28,23 +28,6 @@ module.exports = function(config) {
       // 'src/apps/**/*.html'
     ],
 
-    // ngHtml2JsPreprocessor: {
-    //   // strip this from the file path
-    //   // stripPrefix: 'public/',
-    //   // stripSufix: '.ext',
-    //   // // prepend this to the
-    //   // prependPrefix: 'served/',
-
-    //   // // or define a custom transform function
-    //   // cacheIdFromPath: function(filepath) {
-    //   //   return cacheId;
-    //   // },
-
-    //   // setting this option will create only a single module that contains templates
-    //   // from all the files, so you can load them all with module('foo')
-    //   moduleName: 'foo'
-    // },
-
 
     // list of files to exclude
     exclude: [
@@ -54,9 +37,7 @@ module.exports = function(config) {
 
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
-    // preprocessors: {
-    //   '**/*.html': ['ng-html2js']
-    // },
+    preprocessors: {},
 
 
     // test results reporter to use
