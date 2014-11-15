@@ -6,7 +6,7 @@ var config     = require('./../config')[ taskname ];
 
 var protractor = require('gulp-protractor').protractor;
 
-gulp.task( taskname, ['webdriver:update', 'browserSync:dontopen'], function () {
+gulp.task( taskname, ['webdriver:update', 'browser-sync:dontopen'], function () {
 
   return gulp.src( config.src )
     .pipe(protractor({

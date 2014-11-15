@@ -5,7 +5,7 @@ var browserSync = require('browser-sync');
 var config      = require('./../config');
 
 // continuously compile app on js changes
-gulp.task( taskname, ['browserSync'], function () {
+gulp.task( taskname, ['browser-sync'], function () {
   gulp.watch( config.app.src, ['app']);
   gulp.watch('src/index.html', ['copy']);
 
