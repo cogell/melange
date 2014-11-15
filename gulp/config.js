@@ -7,7 +7,7 @@ module.exports = {
   dest: dest,
   src: src,
 
-  "browser-sync": {
+  'browser-sync': {
     server: {
       // serve src folder for sourcemap linking
       baseDir: [dest, src],
@@ -30,6 +30,7 @@ module.exports = {
     ],
     output: 'app.js',
     dest: dest,
+    wrap: './gulp/wrap.js'
   },
 
   lint: {
