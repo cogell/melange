@@ -29,5 +29,7 @@
 
 ### node_modules
 
+Update: I've already reversed my decision. Something about my checked in node_modules was causing Travis-CI to not find all the node_modules required. I highly suspect that it had to do with case insensitivity directory/file names on my mac while Travis-CI was running in Linux.
+
 I'm decided to try checking in my node_modules (and other vendor libraries) into version control.  I've been burned so many times by dependencies not resolving (even when they are locked) that I'm gunna give this a go.
 
