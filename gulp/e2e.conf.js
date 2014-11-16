@@ -30,9 +30,7 @@ var config = {
 // If this is running on [Travis](http://travis-ci.org) then we add additional details to run the tests on the
 // [Sauce labs](https://saucelabs.com/opensource/travis) cloud.
 if (process.env.TRAVIS) {
-  console.log('>>>>>>>>>>>>>>>>>>>>>>');
-  console.log('process env travis TRUE');
-
+  config.seleniumAddress = 'http://localhost:4445/wd/hub';
   config.sauceUser = process.env.SAUCE_USERNAME;
   config.sauceKey = process.env.SAUCE_ACCESS_KEY;
   config.capabilities = _.extend(config.capabilities, {
