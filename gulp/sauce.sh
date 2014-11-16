@@ -2,7 +2,7 @@
 
 set -e
 
-CONNECT_URL="https://saucelabs.com/downloads/sc-4.3.5-linux.tar.gz"
+CONNECT_URL="https://saucelabs.com/downloads/sc-4.3.5-linux.tar.gzgp"
 CONNECT_DIR="/tmp/sauce-connect-$RANDOM"
 CONNECT_DOWNLOAD="sc-linux.tar.gz"
 READY_FILE="connect-ready-$RANDOM"
@@ -15,10 +15,9 @@ tar zxvf $CONNECT_DOWNLOAD --strip-components=1
 rm $CONNECT_DOWNLOAD
 
 # Start
-# ./bin/sc --readyfile $READY_FILE \
-#   --tunnel-identifier $TRAVIS_JOB_NUMBER \
-#   -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY &
-./bin/sc -u vvvnt -k 4ff5280b-73d3-484c-ac19-f369ca10c733 &
+./bin/sc --readyfile $READY_FILE \
+  --tunnel-identifier $TRAVIS_JOB_NUMBER \
+  -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY &
 
 # Wait for Connect to be ready before exiting
 while [ ! -f $READY_FILE ]; do
