@@ -3,6 +3,19 @@ language: node_js
 node_js:
   - 0.10
 
+env:
+  global:
+    - secure: ELfz2482SPrsNjPvcEd/biRulyYHgd1PDiWeQzDYqfsXpdBoizeMBZXYa7FOUr0VGjtWrqtqRJeBTWbRPuKV2RAmadoMbyd4KCs1JvPxKgNQCAh9nSJDmEkp0VdlxrmANw3JpJN3OzwksJXcHQlBVTgd8nbnoA+6+nYV/0YK1/E=
+    - secure: ewVR8eytV8XTtRF3Dv1QqE8XLDQIDALZ7qUleDRee7xPQBYRLUpDcw+pcUOjSL/lxIZzPSNETQSZoMEI3RyvQdhrEWZtdoM3JOfq3ekDGDL7eEQYaNP/Z74Z4v4l+28N/yGQ9xRjoOieYFpakucEBNp4FAn3dBHJxhYSPyOrZzc=
+
+addons:
+  sauce_connect: true
+
+notifications:
+  email:
+    on_success: never
+  slack: vvvnt:MSRstLwIwMENh2Md9gcjJJtn
+
 before_install:
   - npm install -g gulp
 
@@ -18,17 +31,3 @@ before_script:
 script:
   - gulp ci
   - gulp e2e
-
-env:
-  global:
-    - secure: ELfz2482SPrsNjPvcEd/biRulyYHgd1PDiWeQzDYqfsXpdBoizeMBZXYa7FOUr0VGjtWrqtqRJeBTWbRPuKV2RAmadoMbyd4KCs1JvPxKgNQCAh9nSJDmEkp0VdlxrmANw3JpJN3OzwksJXcHQlBVTgd8nbnoA+6+nYV/0YK1/E=
-    - secure: ewVR8eytV8XTtRF3Dv1QqE8XLDQIDALZ7qUleDRee7xPQBYRLUpDcw+pcUOjSL/lxIZzPSNETQSZoMEI3RyvQdhrEWZtdoM3JOfq3ekDGDL7eEQYaNP/Z74Z4v4l+28N/yGQ9xRjoOieYFpakucEBNp4FAn3dBHJxhYSPyOrZzc=
-
-addons:
-  sauce_connect: true
-
-notifications:
-  email:
-    on_success: never
-  slack: vvvnt:MSRstLwIwMENh2Md9gcjJJtn
-
