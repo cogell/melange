@@ -21,7 +21,7 @@ before_install:
 
 # needed to start server as discussed here: http://docs.travis-ci.com/user/gui-and-headless-browsers/#Starting-a-Web-Server
 before_script:
-  - bash ./gulp/sauce.sh
+  - bash ./gulp/sauce.sh &
   # - "export DISPLAY=:99.0"
   # - "sh -e /etc/init.d/xvfb start"
   # - sleep 3 # give xvfb some time to start
