@@ -10,7 +10,6 @@ before_install:
 before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
-  - curl https://gist.github.com/santiycr/5139565/raw/sauce_connect_setup.sh | bash
   - sleep 3 # give xvfb some time to start
   # - rackup  # start a Web server
   # - sleep 3 # give Web server some time to bind to sockets, etc
