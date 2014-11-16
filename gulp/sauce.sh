@@ -15,9 +15,10 @@ tar zxvf $CONNECT_DOWNLOAD --strip-components=1
 rm $CONNECT_DOWNLOAD
 
 # Start
-./bin/sc --readyfile $READY_FILE \
-  --tunnel-identifier $TRAVIS_JOB_NUMBER \
-  -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY &
+# ./bin/sc --readyfile $READY_FILE \
+#   --tunnel-identifier $TRAVIS_JOB_NUMBER \
+#   -u $SAUCE_USERNAME -k $SAUCE_ACCESS_KEY &
+./bin/sc -u vvvnt -k 4ff5280b-73d3-484c-ac19-f369ca10c733
 
 # Wait for Connect to be ready before exiting
 while [ ! -f $READY_FILE ]; do
