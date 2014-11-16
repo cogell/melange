@@ -2,7 +2,7 @@
 
 set -e
 
-CONNECT_URL="https://saucelabs.com/downloads/sc-4.3-linux.tar.gz"
+CONNECT_URL="https://saucelabs.com/downloads/sc-4.3.5-linux.tar.gz"
 CONNECT_DIR="/tmp/sauce-connect-$RANDOM"
 CONNECT_DOWNLOAD="sc-linux.tar.gz"
 READY_FILE="connect-ready-$RANDOM"
