@@ -1,14 +1,16 @@
 language: node_js
 node_js:
 - 0.10
+addons:
+  sauce_connect: true
 notifications:
   email:
     on_success: never
   slack: vvvnt:MSRstLwIwMENh2Md9gcjJJtn
 before_install:
 - npm install -g gulp
-before_script:
-- bash ./gulp/sauce.sh
+# before_script:
+# - bash ./gulp/sauce.sh
 script:
 - gulp ci
 - gulp e2e
