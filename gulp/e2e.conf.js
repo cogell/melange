@@ -10,8 +10,7 @@ var config = {
   ],
 
   capabilities: {
-    'browserName': 'chrome',
-
+    'browserName': 'chrome'
   },
 
   baseUrl: 'http://localhost:3000/',
@@ -38,4 +37,4 @@ if (process.env.TRAVIS) {
   };
 }
 
-module.exports = config;
+exports.config = config;
