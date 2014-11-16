@@ -31,8 +31,8 @@ var config = {
 // [Sauce labs](https://saucelabs.com/opensource/travis) cloud.
 if (process.env.TRAVIS) {
   config.seleniumAddress = 'http://localhost:4445/wd/hub';
-  config.sauceUser = process.env.SAUCE_USERNAME;
-  config.sauceKey = process.env.SAUCE_ACCESS_KEY;
+  // config.sauceUser = process.env.SAUCE_USERNAME;
+  // config.sauceKey = process.env.SAUCE_ACCESS_KEY;
   config.capabilities = _.extend(config.capabilities, {
     'username': process.env.SAUCE_USERNAME,
     'accessKey': process.env.SAUCE_ACCESS_KEY,
