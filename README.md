@@ -27,6 +27,41 @@
 
 ## Jury is still out...
 
+## Functional Modules, Route Modules, and Common Module:
+### Everything is a service!
+
+This is something I wanted to try out on v1.0 but never got around to it.  I want to decouple the funcationality modules from the route modules from a common module. I believe this will be made easier by the powerful state declarition of the angular-ui-route module.
+
+Rough example of directory structure:
+
+- _common
+  - directives
+  - //etc
+- funcs
+  - _common
+    - directives
+    - //etc
+  - posts
+    - show
+    - list
+    - new
+    - edit
+    - delete
+- routes
+  - admin
+    - posts
+      - manage
+        - publish
+        - search
+      - create
+        - new
+        - edit
+  - reader
+    - posts
+      - list
+      - show
+
+
 ### node_modules
 
 Update: I've already reversed my decision. Something about my checked in node_modules was causing Travis-CI to not find all the node_modules required. I highly suspect that it had to do with case insensitivity directory/file names on my mac while Travis-CI was running in Linux.

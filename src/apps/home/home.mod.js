@@ -1,11 +1,11 @@
 import 'angular'
-import 'angular-route'
+import 'angular-ui-router'
 
 import homeConf from 'apps/home/home.conf'
 
 angular
 .module('home', [
-  'ngRoute'
+  'ui.router'
 ])
 .config( homeConf );
 
