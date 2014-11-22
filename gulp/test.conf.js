@@ -15,23 +15,30 @@ module.exports = function(config) {
 
     // frameworks to use
     // available frameworks: https://npmjs.org/browse/keyword/karma-adapter
-    frameworks: ['jasmine'],
+    frameworks: ['jspm', 'jasmine'],
 
 
     // list of files / patterns to load in the browser
-    files: [
-      angular,
-      angularMocks,
-      'src/**/*.mod.js',
-      '.tmp/*.tmpl.js',
-      'src/**/*.js',
-      'src/**/*.test.js'
-    ],
+    // files: [
+    //   angular,
+    //   angularMocks,
+    //   'src/**/*.mod.js',
+    //   '.tmp/*.tmpl.js',
+    //   'src/**/*.js',
+    //   'src/**/*.test.js'
+    // ],
+
+    // FIXME: doesn't seem to respect 'exclude' option, submit github issue
+    // FIXME: doesn't seem to load systemjs plugin imports i.e. '!text'
+    jspm: {
+        loadFiles: ['src/**/*.test.js'],
+        serveFiles: ['src/**/*.js']
+    },
 
 
     // list of files to exclude
     exclude: [
-      'src/**/*.e2e.js'
+      '**/*.e2e.js'
     ],
 
 

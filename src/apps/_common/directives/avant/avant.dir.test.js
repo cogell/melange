@@ -1,3 +1,7 @@
+import 'angular';
+import 'angular-mocks';
+import 'apps/_common/directives/avant/avant.mod';
+
 describe('Avant Directive', function() {
   var element;
 
@@ -5,7 +9,7 @@ describe('Avant Directive', function() {
 
   beforeEach(inject(function($compile, $rootScope){
 
-    element = angular.element('<av-avant></av-avant>');
+    element = angular.element('<avant></avant>');
     $compile(element)($rootScope);
     $rootScope.$digest();
 

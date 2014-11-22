@@ -16,20 +16,20 @@ var task = function (watch, browser, cb) {
 
 };
 
-gulp.task( taskname, ['templates'], function (done) {
+gulp.task( taskname, [/*'templates'*/], function (done) {
   task(false, 'Chrome', done);
 });
 
-gulp.task( taskname + ':watch', ['templates'], function (done) {
+gulp.task( taskname + ':watch', [/*'templates'*/], function (done) {
   task(true, 'Chrome', done);
 });
 
-gulp.task( taskname + ':firefox', ['templates'], function (done) {
+gulp.task( taskname + ':firefox', [/*'templates'*/], function (done) {
 
   task(false, 'Firefox', done);
 });
 
-gulp.task( taskname + ':phantomjs', ['templates'], function (done) {
+gulp.task( taskname + ':phantomjs', [/*'templates'*/], function (done) {
 
   task(false, 'PhantomJS', done);
 });
