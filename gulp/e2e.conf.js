@@ -1,6 +1,6 @@
 // config for protractor
 
-exports.config = {
+var config = {
   allScriptsTimeout: 11000,
 
   rootElement: '.rootElement',
@@ -23,4 +23,7 @@ exports.config = {
     isVerbose: true,
     includeStackTrace: true
   }
+
 };
+
+exports.config = config;

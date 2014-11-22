@@ -10,7 +10,7 @@ module.exports = {
   'browser-sync': {
     server: {
       // serve src folder for sourcemap linking
-      baseDir: [dest, src],
+      baseDir: [src, '.'],
     }
   },
 

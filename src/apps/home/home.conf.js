@@ -1,8 +1,8 @@
-angular
-.module('home')
-.config(function ($routeProvider) {
+import homeTmpl from 'apps/home/home.tmpl.html!text'
+
+export default function ($routeProvider) {
   $routeProvider
     .when('/', {
-      templateUrl: 'apps/home/home.tmpl.html'
+      template: homeTmpl
     });
-});
+}

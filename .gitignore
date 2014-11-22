@@ -1,3 +1,6 @@
 /.tmp
 /bin
 /node_modules
+/jspm_packages
+build.js
+npm-debug.log
