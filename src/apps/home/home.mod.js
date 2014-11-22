@@ -1,4 +1,7 @@
+import 'angular'
+
 angular
 .module('home', [
-  'ngRoute'
+
 ]);
+
