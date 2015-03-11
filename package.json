@@ -1,79 +1,60 @@
 {
-  "name": "melange",
+  "name": "frontend_stack",
   "version": "0.0.1",
-  "description": "The new CMS service for the vvvnt",
-  "main": "bin/index.html",
+  "description": "some hello world and exploration of my personal javascript stack (work in progress)",
+  "private": true,
+  "main": "src/index.html",
   "scripts": {
-    "test": "node_modules/gulp/bin/gulp.js test",
-    "start": "node_modules/gulp/bin/gulp.js start",
-    "lint": "node_modules/gulp/bin/gulp.js lint"
+    "test": "gulp --gulpfile ./runner/gulpfile.js --cwd . test",
+    "start": "gulp --gulpfile ./runner/gulpfile.js --cwd . watch",
+    "build": "gulp --gulpfile ./runner/gulpfile.js --cwd . build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/avantdotorg/melange.git"
+    "url": "git://github.com/cogell/frontend_stack.git"
   },
-  "keywords": [
-    "angularjs",
-    "node",
-    "gulp"
-  ],
-  "author": "B Cedric Cogell",
-  "license": "Creative Commons",
-  "bugs": {
-    "url": "https://github.com/avantdotorg/melange/issues"
-  },
-  "homepage": "https://github.com/avantdotorg/melange",
-  "dependencies": {
-    "angular": "^1.3.1",
-    "angular-route": "^1.3.2"
-  },
+  "author": "B. Cedric Cogell",
+  "license": "CC",
   "devDependencies": {
-    "angular-mocks": "^1.3.2",
-    "browser-sync": "^1.6.3",
-    "del": "^0.1.3",
-    "event-stream": "^3.1.7",
-    "extend": "^2.0.0",
-    "file": "^0.2.2",
+    "css-loader": "^0.9.1",
+    "del": "^1.1.1",
+    "eslint": "^0.11.0-alpha.0",
     "gulp": "^3.8.10",
-    "gulp-angular-templatecache": "^1.4.2",
-    "gulp-concat": "^2.4.1",
-    "gulp-jshint": "^1.9.0",
-    "gulp-ng-annotate": "^0.3.4",
-    "gulp-protractor": "0.0.11",
-    "gulp-replace": "^0.5.0",
-    "gulp-rev": "^2.0.1",
-    "gulp-rev-all": "^0.7.1",
-    "gulp-rev-manifest-replace": "0.0.3",
-    "gulp-rev-replace": "^0.3.1",
-    "gulp-sourcemaps": "^1.2.8",
-    "gulp-uglify": "^1.0.1",
-    "gulp-wrap": "^0.5.0",
-    "jasmine": "^2.0.1",
-    "karma": "^0.12.24",
-    "karma-chrome-launcher": "^0.1.5",
-    "karma-jasmine": "^0.2.3",
-    "karma-jspm": "^1.0.1",
-    "karma-ng-html2js-preprocessor": "^0.1.2",
-    "karma-phantomjs-launcher": "^0.1.4",
-    "lodash": "^2.4.1",
-    "minimatch": "^1.0.0",
-    "protractor": "^1.4.0",
-    "q": "^1.1.1",
-    "relquire": "^0.4.1",
+    "gulp-eslint": "^0.4.2",
+    "gulp-template": "^3.0.0",
+    "gulp-util": "^3.0.3",
+    "jest-cli": "^0.4.0",
+    "jsx-loader": "^0.12.2",
+    "lodash.assign": "^3.0.0",
+    "lodash.map": "^2.4.1",
     "require-dir": "^0.1.0",
-    "run-sequence": "^1.0.1",
-    "yargs": "^1.3.3"
+    "run-sequence": "^1.0.2",
+    "sass-loader": "^0.4.0-beta.1",
+    "style-loader": "^0.8.3",
+    "webpack": "^1.5.3",
+    "webpack-dev-server": "^1.7.0"
   },
-  "jspm": {
-    "directories": {
-      "dist": "bin"
-    },
-    "dependencies": {
-      "angular": "^1.3.3",
-      "angular-mocks": "^1.3.3",
-      "angular-route": "^1.3.3",
-      "angular-ui-router": "^0.2.13",
-      "text": "^0.0.2"
-    }
+  "dependencies": {
+    "qwest": "^1.5.4",
+    "react": "^0.12.2",
+    "react-tools": "^0.12.2"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/runner/scripts/preprocessor.js",
+    "testPathDirs": [
+      "<rootDir>/_src"
+    ],
+    "testDirectoryName": "_src",
+    "testFileExtensions": [
+      "test.js"
+    ],
+    "unmockedModulePathPatterns": [
+      "react"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "scss"
+    ]
   }
 }
