@@ -1,3 +1,6 @@
+- add eslint to intellij
+- add webpack middleware to handle sending all non-file routes to index 
+
 - add jest to gulp
 - add lint step to gulp
 - github fix for single quotes in jest config docs

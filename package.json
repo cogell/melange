@@ -41,6 +41,7 @@
     "radium": "^0.10.0",
     "react": "^0.12.2",
     "react-masonry-mixin": "^0.5.5",
+    "react-router": "^0.12.4",
     "react-tools": "^0.12.2"
   },
   "jest": {

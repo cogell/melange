@@ -1,24 +1,11 @@
 var React = require('react');
 var {StyleResolverMixin, BrowserStateMixin} = require('radium');
+var Link = require('router').link;
 
-var Post = React.createClass({
+var Card = React.createClass({
   mixins: [StyleResolverMixin, BrowserStateMixin],
-  propTypes: {
-    name: React.PropTypes.string
-  },
-
-  getDefaultProps: function () {
-    return {
-      name: 'Cedric'
-    };
-  },
-
-  handleClick: function () {
-    console.log(`post with title ${this.props.title} was clicked`);
-  },
 
   render: function () {
-
     var blue = '#2B4AB3';
 
     var styles = {
@@ -56,6 +43,7 @@ var Post = React.createClass({
         {...this.getBrowserStateEvents()}
         onClick={this.handleClick}
         style={this.buildStyles(styles)}>
+        <Link to="post" params={{id: }}/>
 
         <img
           src={this.props.image}
@@ -77,7 +65,6 @@ var Post = React.createClass({
       </div>
     );
   }
-
 });
 
-module.exports = Post;
+module.exports = Card;
