@@ -1,9 +1,18 @@
 var React = require('react');
 var qwest = require('qwest');
+var moment = require('moment');
+var MasonryMixin = require('react-masonry-mixin');
 
 var Post = require('../post/post.component');
 
+var masonryOptions = {
+  transitionDuration: 0
+};
+
 var Posts = React.createClass({
+
+  mixins: [MasonryMixin('masonryContainer', masonryOptions)],
+
   getInitialState: function () {
     return {
       posts: []
@@ -28,10 +37,23 @@ var Posts = React.createClass({
   render: function () {
     var posts = this.state.posts.map(function (post) {
 
-      return <Post title={post.title} exceprt={post.excerpt}/>;
+      console.log('post: ', post);
+
+      // data wrangling
+      var authors = post.authorsArray.join(', ');
+      var publishedTime = moment(post.publishedAt).format('MMMM Do YYYY');
+
+      return <Post
+        key={post.id}
+        title={post.title}
+        excerpt={post.excerpt}
+        image={post.headerImage.filelink}
+        authors={authors}
+        publishedTime={publishedTime}
+        tags={post.tags}/>;
     });
     return (
-      <div>
+      <div ref='masonryContainer'>
         { posts }
       </div>
     );

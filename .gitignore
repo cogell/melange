@@ -1,6 +1,11 @@
-/.tmp
-/bin
-/node_modules
-/jspm_packages
-build.js
+# Logs #
 npm-debug.log
+
+# Libraries #
+/node_modules
+
+# Build Artifacts #
+/_dist
+
+# Developer Tools #
+.idea

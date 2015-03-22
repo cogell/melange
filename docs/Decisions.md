@@ -14,20 +14,20 @@
 
 ## <Nothing> over Flow
 - couldn't get simple react code (from tutorials) to typecheck without errors
-- documentation on flow is sooooo sparse
+- documentation on flow is **so** sparse
 - no/small community support at the moment
 
 
 ## ESLint over JSHint
 - eslint supports jsx
 - eslint supports es6
-- eslint sublime plugin doesnt require global install of eslint module
+- eslint sublime plugin doesn't require global install of eslint module
 - eslint has custom plugin support
 - eslint has more options
 
 
 ## Webpack over AMD
 - webpack was faster to setup
-- webpack reduced gulp tasks dramtically
+- webpack reduced gulp tasks dramatically
 - webpack gives us ability to require and bundle styles in js code
 - webpack has good jsx support
